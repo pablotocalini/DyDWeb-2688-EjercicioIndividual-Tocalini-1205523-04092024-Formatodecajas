@@ -1,0 +1,177 @@
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* HEADER Y NAVEGACION */
+
+/* Header */
+header {
+  background-color: #4caf50;
+  padding: 10px 20px;
+}
+
+/* Nav */
+nav {
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+nav ul li {
+  color: white;
+}
+
+/* Mueve el li que contiene el theme-toggle al extremo derecho */
+nav ul li:last-child {
+  margin-left: auto; /* Empuja el último li al extremo derecho */
+}
+
+/* theme-toggle en línea */
+.theme-toggle {
+  display: flex; /* Mantiene la disposición en línea de los radios */
+  gap: 10px; /* Espacio entre los radios */
+}
+
+/* MAIN */
+main {
+  padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  text-align: center;
+}
+
+.section-heading {
+  padding: 5px;
+  background-color: #4caf50;
+  color: white;
+}
+
+.image-container {
+  display: flex; /* Para organizar los elementos */
+  flex-wrap: wrap; /* Las imágenes se ajusten en varias filas si es necesario */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  max-width: 100%; /* Para que el contenedor no exceda el ancho de la pantalla */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 20px; /* Espacio entre las imágenes */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Tamaño de las Imágenes */
+.image-container img {
+  max-width: 600px; /* Ajusta el ancho máximo de las imágenes */
+  height: auto; /* Mantiene la proporción original de la imagen */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Form */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  box-shadow: 0 0 10px;
+  background-color: #f5f5f5;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* FOOTER */
+footer {
+  background-color: #4caf50;
+  padding: 1px;
+  text-align: center;
+  color: white;
+}
+
+/* MODO OSCURO */
+
+.theme-toggle input[type='radio'] {
+  display: none;
+}
+
+/* Estilos de los labels como botones */
+.theme-toggle label {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+  user-select: none;
+}
+
+/* Estado seleccionado de los botones */
+input#light-mode:checked + label[for='light-mode'] {
+  background-color: #ddd;
+  color: black;
+}
+
+input#dark-mode:checked + label[for='dark-mode'] {
+  background-color: #333;
+  color: white;
+}
+
+/* Cambiar estilos al modo oscuro */
+body:has(input#dark-mode:checked) {
+  background-color: black;
+  color: #ccc;
+}
+
+body:has(input#dark-mode:checked) {
+  color: #ccc;
+}
+
+/* Cambiar el color de los labels dentro del form en modo oscuro */
+body:has(input#dark-mode:checked) section form label {
+  color: black;
+}

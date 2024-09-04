@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+      type="text/css"
+    />
+    <link
+      rel="icon"
+      href="img/icono-vete.png"
+      type="image/x-icon"
+    />
+    <title>Veterinaria</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Inicio</li>
+          <li>Servicios</li>
+          <li>Tienda</li>
+          <li>
+            <div class="theme-toggle">
+              <input
+                type="radio"
+                id="light-mode"
+                name="theme"
+                checked
+              />
+              <label for="light-mode">Modo Claro</label>
+
+              <input
+                type="radio"
+                id="dark-mode"
+                name="theme"
+              />
+              <label for="dark-mode">Modo Oscuro</label>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>BIENVENIDOS A NUESTRA VETERINARIA</h1>
+        <p>Cuida a tus mascotas con los mejores profesionales.</p>
+        <div class="image-container">
+          <img
+            src="img/cuidado-mascota-1.jpg"
+            alt="Profesionales atendiendo"
+            width="300px"
+          />
+          <img
+            src="img/cuidado-mascota-2.jpg"
+            alt="Mascota feliz esperando la atencion"
+          />
+        </div>
+      </section>
+      <section>
+        <h2 class="section-heading">Nuestros Servicios</h2>
+        <div class="service">
+          <h3>Atención Médica General</h3>
+          <p>
+            Nuestro equipo de veterinarios está siempre disponible para brindar
+            atención médica general a tus mascotas, incluyendo consultas
+            generales, chequeos de rutina y vacunaciones.
+          </p>
+          <div class="image-container">
+            <img
+              src="img/atencion-veterinaria-1.jpg"
+              alt="Atención médica veterinaria"
+            />
+            <img
+              src="img/atencion-veterinaria-2.jpg"
+              alt="Atención médica veterinaria"
+            />
+            <img
+              src="img/atencion-veterinaria-3.jpg"
+              alt="Atención médica veterinaria"
+            />
+          </div>
+        </div>
+        <div class="service">
+          <h3>Estudios Médicos y Cirugías</h3>
+          <p>
+            Realizamos estudios de diagnóstico avanzados como ecografías,
+            radiografías y análisis de laboratorio, además de cirugías
+            especializadas.
+          </p>
+          <div class="image-container">
+            <img
+              src="img/cirugia.jpg"
+              alt="cirugías veterinarias"
+            />
+            <img
+              src="img/estudios-medicos.jpg"
+              alt="cirugías veterinarias"
+              width="300px"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="contact-form">
+        <h2 class="section-heading">Formulario de Registro</h2>
+        <h4>Registrate y accedé a todos nuestros beneficios</h4>
+        <div class="form-container">
+          <form
+            action="mailto:pablotocalini@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <label for="full-name">Nombre y Apellido</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              required
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+
+            <label for="phone">Teléfono:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+            />
+
+            <label for="mascota">Nombre de la Mascota:</label>
+            <input
+              type="text"
+              id="mascota"
+              name="mascota"
+              required
+            />
+
+            <label for="tipo">Tipo de Mascota:</label>
+            <select
+              id="tipo"
+              name="tipo"
+            >
+              <option value="perro">Perro</option>
+              <option value="gato">Gato</option>
+              <option value="otro">Otro</option>
+            </select>
+
+            <button type="submit">Registrarse</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Veterinaria - Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
